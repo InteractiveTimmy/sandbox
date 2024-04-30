@@ -1,0 +1,15 @@
+{
+  "name": "@sandbox/web-component-example",
+  "scripts": {
+    "build": "yarn build:dist",
+    "build:dist": "yarn build:dist:module && yarn build:dist:browser",
+    "build:dist:browser": "esbuild ./src/main.ts --bundle --outfile=./dist/browser/index.js --format=iife",
+    "build:dist:module": "tsc --declaration --declarationMap --declarationDir ./dist/types --module CommonJS --outDir ./dist/module",
+    "start": "serve"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "serve": "^14.2.3",
+    "typescript": "^5.4.5"
+  }
+}

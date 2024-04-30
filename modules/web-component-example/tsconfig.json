@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
+    "moduleResolution": "node",
+
+    "sourceMap": true,
+    "inlineSources": true,
+    "newLine": "lf",
+
+    "allowJs": false,
+
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "ES6",
+      "DOM",
+      "webWorker"
+    ],
+    "target": "es6"
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
