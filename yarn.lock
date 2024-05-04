@@ -166,6 +166,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sandbox/boombox@workspace:modules/boombox":
+  version: 0.0.0-use.local
+  resolution: "@sandbox/boombox@workspace:modules/boombox"
+  dependencies:
+    serve: "npm:^14.2.3"
+  languageName: unknown
+  linkType: soft
+
+"@sandbox/node-renderer@workspace:modules/node-renderer":
+  version: 0.0.0-use.local
+  resolution: "@sandbox/node-renderer@workspace:modules/node-renderer"
+  dependencies:
+    serve: "npm:^14.2.3"
+  languageName: unknown
+  linkType: soft
+
 "@sandbox/web-component-example@workspace:modules/web-component-example":
   version: 0.0.0-use.local
   resolution: "@sandbox/web-component-example@workspace:modules/web-component-example"

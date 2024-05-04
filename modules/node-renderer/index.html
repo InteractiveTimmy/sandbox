@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Particle Playground</title>
+    <script src="index.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      html {
+        background-color: #057;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+  </body>
+  <script>
+
+    const thisCanvas = document.querySelector( 'canvas' );
+
+    
+    document.querySelector( 'canvas' ).width = window.innerWidth;
+    document.querySelector( 'canvas' ).height = window.innerHeight;
+
+    const target = new Point( [ window.innerWidth / 2, window.innerHeight / 2 ], [ 0, 0 ], true );
+
+    thisCanvas.addEventListener( 'mousemove', ( e ) => {
+      target.position = [ e.clientX, e.clientY ];
+    } );
+
+    let myAnimation = init( document.querySelector( 'canvas' ), 100, target );
+
+    window.addEventListener( 'resize', ( ) => {
+      myAnimation.resize( window.innerWidth, window.innerHeight );
+    } );
+  </script>
+</html>

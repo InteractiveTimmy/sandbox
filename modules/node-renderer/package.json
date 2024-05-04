@@ -1,0 +1,9 @@
+{
+  "name": "@sandbox/node-renderer",
+  "scripts": {
+    "start": "serve ./"
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}

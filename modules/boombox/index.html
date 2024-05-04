@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Boombox</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="index.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body onload="init();">
+    <div id="app">
+      <div id="boombox">
+        <div class="container-row">
+          <h2>Volume</h2>
+          <h3 class="identifier" id="volume"></h3>
+          <input type="range" min="0" max="100" value="50" class="slider" id="s-volume" oninput="onSliderChange('volume', this.value);">
+        </div>
+        <div class="container-row">
+          <h2>Pan</h2>
+          <h3 class="identifier" id="pan"></h3>
+          <input type="range" min="-100" max="100" value="0" class="slider" id="s-pan" oninput="onSliderChange('pan', this.value);">
+        </div>
+        <div class="container-row">
+          <h2>Speed</h2>
+          <h3 class="identifier" id="speed"></h3>
+          <input type="range" min="20" max="200" value="100" class="slider" id="s-speed" oninput="onSliderChange('speed', this.value);">
+        </div>
+        <div class="container-row">
+          <h2>Scrub</h2>
+          <h3 class="identifier" id="scrub"></h3>
+          <input type="range" min="0" max="1000" value="0" class="slider" id="s-scrub" oninput="onSliderChange('scrub', this.value);">
+        </div>
+        <div class="container-row">
+          <div id="b-play" class="button c-info" onclick="handleClick(3);">Play</div>
+          <div id="b-pause" class="button c-warning c-disabled" onclick="handleClick(4);">Pause</div>
+          <div id="b-reset" class="button c-error" onclick="handleClick(5);">Reset</div>
+          <div id="b-loop" class="button c-success c-disabled" onclick="handleClick(6);">Loop</div>
+        </div>
+        <div class="container-row">
+          <div id="b-boop" class="button c-success" onclick="handleClick(0);">Boop</div>
+          <div id="b-bop" class="button c-success" onclick="handleClick(1);">Bop</div>
+          <div id="b-ding" class="button c-success" onclick="handleClick(2);">Ding</div>
+        </div>
+      </div>
+      <div id="disclaimer">Audio was collected from http://rpg.hamsterrepublic.com/ohrrpgce/Free_Sound_Effects and https://patrickdearteaga.com/royalty-free-music/</div>
+    </div>
+  </body>
+</html>
