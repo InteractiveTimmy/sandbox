@@ -1,0 +1,60 @@
+{
+  "blogs": [
+    {
+      "visible": true,
+      "title": "Portfolio Website Built!",
+      "data": "2019-01-28",
+      "body": "I finally built and published a portfolio page for all of my projects and work. While this portfolio is just a start, I hope to continually improve how it handles data and updates.",
+      "image": "img/cta-blog-0.png"
+    },
+    {
+      "visible": true,
+      "title": "Added my Github Projects",
+      "body": "I have added a small collection of my personal projects to this portfolio. Feel free to take a look!",
+      "image": "img/cta-blog-1.png"
+    },
+    {
+      "visible": true,
+      "title": "New About Me",
+      "body": "The Profile section has been updated to contain a little bit more information about myself.",
+      "image": "img/cta-blog-2.png"
+    }
+  ],
+  "projects": [
+    {
+      "visible": true,
+      "title": "Application Tool Kit",
+      "body": "Status - In Development<br /><br />A flexible toolkit platform designed to help streamline web application input and output.",
+      "image": "img/cta-project-0.png",
+      "link": "https://github.com/InteractiveTimmy/atk"
+    },
+    {
+      "visible": true,
+      "title": "Web Boiler Plate",
+      "body": "Status - Release v1.0.0<br /><br />An extremely simple web boiler plate using Webpack, React, and Redux. It contains a demo application that makes use of both Thunk and Saga as middlewear for Redux.",
+      "image": "img/cta-project-1.png",
+      "link": "https://github.com/InteractiveTimmy/wbp"
+    },
+    {
+      "visible": true,
+      "title": "JavaScript ECS",
+      "body": "Status - In Development<br /><br />An entity component system made entirely in JavaScript. Being designed with system pipelines in mind, it will be fully modular upon release.",
+      "image": "img/cta-project-2.png",
+      "link": "https://github.com/InteractiveTimmy/js-ecs"
+    },
+    {
+      "visible": true,
+      "title": "Particle Playground",
+      "body": "Status - In Development<br /><br />A fun project designed to test my current JavaScript ECS repository performance. This project utilizes the HTML5 canvas element and the '2d' canvas context.",
+      "image": "img/cta-project-3.png",
+      "link": "https://github.com/InteractiveTimmy/js-particle-playground"
+    },
+    {
+      "visible": true,
+      "title": "API Boiler Plate",
+      "body": "Status - In Development<br /><br />Designed to streamline the development of small applications that require CRUD operations as well as flexible data interfaces.",
+      "image": "img/cta-project-4.png",
+      "link": "https://github.com/InteractiveTimmy/js-abp"
+    }
+  ]
+}

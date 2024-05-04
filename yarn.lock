@@ -182,6 +182,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@sandbox/profile@workspace:modules/profile":
+  version: 0.0.0-use.local
+  resolution: "@sandbox/profile@workspace:modules/profile"
+  dependencies:
+    serve: "npm:^14.2.3"
+  languageName: unknown
+  linkType: soft
+
 "@sandbox/web-component-example@workspace:modules/web-component-example":
   version: 0.0.0-use.local
   resolution: "@sandbox/web-component-example@workspace:modules/web-component-example"

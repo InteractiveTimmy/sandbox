@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <link rel="manifest" href="img/icons/site.webmanifest">
+    <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Timothy Scheuering</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <!-- Profile Section -->
+    <section id="profile">
+      <header id="header-static">
+        <div class="logo">
+          <div class="logo-first">Timothy</div>
+          <div class="logo-last">Scheuering</div>
+        </div>
+        <nav>
+          <div onclick="openURL( 'profile', 'id' );">Profile</div>
+          <div onclick="openURL( 'blog', 'id' );">Blog</div>
+          <div onclick="openURL( 'projects', 'id' );">Projects</div>
+        </nav>
+      </header>
+
+      <div id='profile-container'>
+        <div class="profile-spacer"></div>
+        <img id="profile-avatar" src='img/avatar.jpg' alt='avatar' />
+        <div id="profile-blob">
+          <h3>Full-Stack Software Developer</h3>
+          <h4>Currently Employed by Cisco Systems</h4>
+        </div>
+        <div id="profile-links">
+          <img src='img/linkedin.svg' alt='linkedin' onclick="openURL( 'https://www.linkedin.com/in/timothy-scheuering', '_blank' );" />
+          <img src='img/github.svg' alt='github' onclick="openURL( 'https://github.com/InteractiveTimmy', '_blank' );" />
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+      <div class="collection">
+        <h1>Blogs</h1>
+      </div>
+      <div id="blog-cards" class="collection">
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="collection">
+        <h1>Projects</h1>
+      </div>
+      <div id="project-cards" class="collection">
+      </div>
+    </section>
+    <footer>
+      © 2019
+    </footer>
+
+    <script>
+      document.onreadystatechange = ( ) => {
+        if ( document.readyState === 'complete' ) {
+
+          let blogCards = document.getElementById( 'blog-cards' );
+          let projectCards = document.getElementById( 'project-cards' );
+          let header = document.getElementsByTagName( 'header' )[0];
+          
+          fetch( 'data.json' ).then( r => r.json( ) ).then( ( r ) => {
+
+            r.blogs.forEach( ( item, i ) => {
+              if ( item.visible )
+              { blogCards.appendChild( createCard( 'blog', i, 'light', item ) ); }
+            } );
+
+            r.projects.forEach( ( item, i ) => {
+              if ( item.visible )
+              { projectCards.appendChild( createCard( 'project', i, 'dark', item ) ); }
+            } );
+
+            window.addEventListener( 'scroll', ( e ) => {
+              if ( checkScroll( window.scrollY ) )
+              { header.className = 'header-solid'; }
+              else
+              { header.className = null; }
+            } );
+
+            setTimeout( ( ) => {
+              generateEllipsis( document.getElementsByClassName( 'card-body' ) );
+
+              if ( checkScroll( window.scrollY ) )
+              { header.className = 'header-solid'; }
+              else
+              { header.className = null; }
+            }, 500 );
+          } );
+        }
+      };
+    </script>
+  </body>
+</html>
